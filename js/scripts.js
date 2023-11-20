@@ -236,15 +236,23 @@
 // for
 // break && continue
 
-// let a = 0;
-// while (a < 5) {
-//   a++;
-//   console.log("a =", a);
+// let a = 1;
+
+// while (a <= 5) {
+//   console.log("a =", a++);
 // }
 
-let a = 3;
+// let a = 3;
 
-while (a) {
-  console.log("a", a);
-  a--;
+// while (a) {
+//   console.log("a", a--);
+// }
+// let a = 1;
+// do {
+//   console.log(a);
+//   a++;
+// } while (a <= 5);
+// let a;
+for (a = 0; a <= 3; a++) {
+  console.log(a);
 }
