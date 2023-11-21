@@ -253,6 +253,163 @@
 //   a++;
 // } while (a <= 5);
 // let a;
-for (a = 0; a <= 3; a++) {
-  console.log(a);
-}
+// for (a = 0; a <= 3; a++) {
+//   console.log(a);
+// }
+
+// let summ = 0;
+
+// while (true) {
+//   let value = +prompt("Введіть число");
+//   if (!value) break;
+
+//   summ += value;
+// }
+// console.log("Summ", summ);
+
+// for (i = 0; i < 10; i++) {
+//   if (i % 2 === 1) continue;
+//   console.log(i);
+// }
+
+//  -----------------------------
+// -------------------------------
+// Масиви
+// ------------------------------
+
+// let arr = ["Apple", "Orange", "Plum"];
+
+// console.log(arr);
+
+// arr[2] = "Lemon";
+
+// console.log(arr);
+
+// arr[3] = "Cherry";
+
+// console.log(arr.length);
+
+// arr.push("Tomato");
+
+// console.log(arr);
+
+// console.log(arr.length);
+
+// arr.pop();
+
+// console.log(arr);
+
+// arr.shift();
+// console.log(arr);
+
+// arr.unshift("Apple");
+// console.log(arr);
+
+// for (i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+// for (item of arr) {
+//   console.log(item);
+// }
+
+// for (key in arr) {
+//   console.log(arr[key]);
+// }
+
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(matrix[2][2]);
+
+// ===================
+// методи присвоення
+// ========================
+
+// let a = 5;
+// let b = a;
+// console.log(a);
+// a = 10;
+// console.log(a);
+// console.log(b);
+
+// let arr = [1, 2, 3];
+// let arr2 = arr;
+
+// arr.push(4);
+
+// console.log(arr);
+// console.log(arr2);
+
+// let arr = ["a", "b", "c", "d", "f"];
+// !!!!!!!!!!!!!!!!!!!
+// console.log(arr);
+// delete arr[2]; // Так не робити!!!
+// !!!!!!!!!!!!!!!!!!!!!
+
+// console.log(arr);
+// arr.splice(2, 1);
+// console.log(arr);
+// arr.splice(0, 1);
+// console.log(arr);
+
+// console.log(arr.slice(1, 3));
+
+// let a = [1, 2, 3];
+// console.log(arr.concat(a, true));
+
+// console.log(arr.indexOf("c", 1));
+// console.log(arr.lastIndexOf("c"));
+// console.log(arr.includes("c"));
+
+// const fruits = [
+//   { id: 0, name: "Aple" },
+//   { id: 1, name: "Tomato" },
+//   { id: 2, name: "Chery" },
+//   { id: 3, name: "Orange" },
+//   { id: 4, name: "Lemon" },
+// ];
+// console.log(fruits);
+
+// find
+// console.log(fruits.find((item) => item.id === 2));
+
+// filter
+// console.log(fruits.filter((item) => item.id < 2));
+
+// map
+// let result = fruits.map((item) => item.name.length);
+// console.log(result);
+
+// let names = "Оля, Юля, Аня, Петя";
+
+// split
+// let arr = names.split(", ");
+
+// console.log(arr);
+
+// join
+// let newStr = arr.join(" +|+ ");
+// console.log(newStr);
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let red = arr.reduce((summ, item) => summ + item);
+// console.log(red);
+// document.write(red);
+// document.write("<br>");
+// // reduce
+// let arr2 = [25, 44, 33];
+// let summ = arr2.reduce((sum, item) => sum + item) / arr2.length;
+// console.log(summ);
+// document.write(summ);
+
+let x = 10;
+let y = 20;
+const foo = (z) => {
+  let x = 100;
+  return x + y + z;
+};
+// foo(30);
+console.log(foo(30));
