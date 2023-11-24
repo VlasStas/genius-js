@@ -677,3 +677,118 @@
 // user.info.bind(Ann)("Kyiv");
 // const nataInfo = user.info.bind(Nata, "Dnipro");
 // nataInfo();
+
+// ============= call
+
+// const userInfo = {
+//   name: "name",
+//   age: 98,
+//   logInfo: function (job) {
+//     console.group(`${name} info:`);
+//     console.log(`Name is : ${this.name}`);
+//     console.log(`Age is : ${this.age}`);
+//     console.log(`Job is : ${job}`);
+//     console.groupEnd();
+//   },
+// };
+
+// const Vano = {
+//   name: "Ivan",
+//   age: 45,
+// };
+// userInfo.logInfo.call(Vano, "developer");
+
+// =======  apply
+
+// const showUserInfo = {
+//   name: "name",
+//   age: 87,
+//   logInfo: function (job, city) {
+//     console.group(`${name} info:`);
+//     console.log(`Name is : ${this.name}`);
+//     console.log(`Age is : ${this.age}`);
+//     console.log(`Job is : ${job}`);
+//     console.log(`City is : ${city}`);
+//     console.groupEnd();
+//   },
+// };
+
+// const Vano = {
+//   name: "Ivan",
+//   age: 45,
+// };
+
+// showUserInfo.logInfo.apply(Vano, ["developer", "Dnipro"]);
+
+////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////
+
+// const message = function (name, stars) {
+//   console.log(`${name}, Welcome to ${this.hotel}, stars ${stars}`);
+// };
+
+// const Bukovel = { hotel: "Bukovel" };
+// const Turist = { hotel: "Turist" };
+
+// message.call(Bukovel, "Ivan", 5);
+// message.call(Turist, "Ivan", 3);
+
+// message.apply(Bukovel, ["Ivan", 5]);
+// message.apply(Turist, ["Ivan", 3]);
+
+// message.bind(Bukovel, "Ivan", 5)();
+// message.bind(Turist, "Ivan", 3)();
+
+// //////////////////////////////////////
+
+// const cart = {
+//   showItems() {
+//     console.log(" в корзині: ", this.items);
+//   },
+// };
+
+// const woman = {
+//   items: ["Сукня, туфлі"],
+// };
+// const man = {
+//   items: ["Костюм, сорочка"],
+// };
+// const child = {
+//   items: ["майка, шорти"],
+// };
+
+// // cart.showItems.bind(man)();
+
+// document
+//   .querySelector("#wom")
+//   .addEventListener("click", cart.showItems.bind(woman));
+
+// document
+//   .querySelector("#man")
+//   .addEventListener("click", cart.showItems.bind(man));
+
+// document
+//   .querySelector("#kid")
+//   .addEventListener("click", cart.showItems.bind(child));
+
+// const infoCar = {
+//   name: "BMW",
+//   model: "M7",
+//   color: "White",
+//   showInfo: function () {
+//     console.log(
+//       "Car - " + this.name + " Model - " + this.model + " Color - " + this.color
+//     );
+//   },
+// };
+
+// car2 = {
+//   name: "Opel",
+//   model: "xxx",
+//   color: "red",
+// };
+
+// infoCar.showInfo();
+// infoCar.showInfo.bind(car2)();
+// infoCar.showInfo.call(car2);
+// infoCar.showInfo.apply(car2);
